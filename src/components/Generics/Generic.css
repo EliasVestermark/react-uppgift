@@ -1,0 +1,54 @@
+.btn-yellow {
+  background-color: #F9D783;
+  border: 1px solid #F9D783;
+  color: #4c4946;
+  text-decoration: none;
+  padding: 0.6rem 1.5rem;
+  font-weight: 400;
+  border-radius: 25px;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.btn-yellow i {
+  margin-left: 0.5rem;
+}
+.btn-yellow:hover {
+  background-color: #191919;
+  border-color: #191919;
+  color: #F0EFE9;
+}
+
+.btn-black {
+  background-color: #191919;
+  border: 1px solid #191919;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 0.6rem 1.5rem;
+  font-weight: 400;
+  border-radius: 25px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.btn-black i {
+  margin-left: 0.5rem;
+}
+.btn-black:hover {
+  background-color: #FFFFFF;
+  color: #191919;
+}
+
+.btn-transparent {
+  background-color: transparent;
+  border: 1px solid #191919;
+  color: #191919;
+  text-decoration: none;
+  padding: 0.6rem 1.5rem;
+  font-weight: 400;
+  border-radius: 2rem;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.btn-transparent i {
+  margin-left: 0.5rem;
+}
+.btn-transparent:hover {
+  background-color: #191919;
+  color: #F0EFE9;
+}
