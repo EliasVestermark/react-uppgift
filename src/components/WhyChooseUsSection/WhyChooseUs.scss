@@ -1,0 +1,119 @@
+.why-choose-us {
+        
+    .container {           
+        @media(min-width: 1400px) {
+            display: flex;
+        }
+    }
+
+    .text {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+
+        @media(min-width: 1400px) {
+            justify-content:left;
+            gap: 0px;
+        }
+
+        .section-title {
+            padding-top: 60px;
+            text-align: center;
+
+            img {
+                @media(min-width: 768px) {
+                    padding: 60px 80px 0px 80px;
+                }
+            }
+
+            @media(min-width: 1400px) {
+                display: block;
+                padding: 60px 0px 0px;
+                text-align: left;
+            }
+        }
+
+        .reason {
+            position: relative;
+            margin-top: 0px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-areas: "circle h3"
+                                 "circle p";
+
+            @media(min-width: 1000px) {
+                margin-top: 46px;
+            }
+            
+            .circle {
+                grid-area: circle;                    
+                width: 60px;
+                height: 60px;
+                border: 1px solid RGBA(25,25,25,0.1 );
+                border-radius: 30px;
+            }
+
+            img {
+                position: absolute;
+                top: 16px;
+                left: 16px;
+            }
+
+            h3 {
+                grid-area: h3;
+                margin-left: 24px;
+                margin-bottom: 0px;
+                margin-top: 6px;
+            }
+
+            p {
+                grid-area: "p";
+                margin-left: 24px;
+                margin-bottom: 0;
+                color: RGBA(25,25,25,0.7 );
+            }
+        }
+    }
+
+    .image {
+        position: relative;
+        display: flex;
+        margin-top: 50px;
+        justify-content: center;
+        padding-bottom: 60px;
+
+        @media(min-width: 1400px) {
+            padding-left: 220px;
+            margin-top: 90px;
+            margin-left: 112px;
+            margin: auto;
+        }
+
+        img {
+            @media(max-width: 767px) {
+                max-width: 90%;
+            }
+        }
+
+        .square {
+            position: absolute;
+            background-color: #F0EFE9;
+            height: 225px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+
+            @media(min-width: 768px) {
+                height: 425px;
+                bottom: -60px;
+            }
+            
+            @media(min-width: 1400px) {
+                left: 60px;
+                width: 100vw;
+            }
+        }
+    }
+}

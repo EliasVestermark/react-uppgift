@@ -1,0 +1,110 @@
+@media (min-width: 1400px) {
+  .why-choose-us .container {
+    display: flex;
+  }
+}
+.why-choose-us .text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+@media (min-width: 1400px) {
+  .why-choose-us .text {
+    justify-content: left;
+    gap: 0px;
+  }
+}
+.why-choose-us .text .section-title {
+  padding-top: 60px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .why-choose-us .text .section-title img {
+    padding: 60px 80px 0px 80px;
+  }
+}
+@media (min-width: 1400px) {
+  .why-choose-us .text .section-title {
+    display: block;
+    padding: 60px 0px 0px;
+    text-align: left;
+  }
+}
+.why-choose-us .text .reason {
+  position: relative;
+  margin-top: 0px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "circle h3" "circle p";
+}
+@media (min-width: 1000px) {
+  .why-choose-us .text .reason {
+    margin-top: 46px;
+  }
+}
+.why-choose-us .text .reason .circle {
+  grid-area: circle;
+  width: 60px;
+  height: 60px;
+  border: 1px solid RGBA(25, 25, 25, 0.1);
+  border-radius: 30px;
+}
+.why-choose-us .text .reason img {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+.why-choose-us .text .reason h3 {
+  grid-area: h3;
+  margin-left: 24px;
+  margin-bottom: 0px;
+  margin-top: 6px;
+}
+.why-choose-us .text .reason p {
+  grid-area: "p";
+  margin-left: 24px;
+  margin-bottom: 0;
+  color: RGBA(25, 25, 25, 0.7);
+}
+.why-choose-us .image {
+  position: relative;
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+@media (min-width: 1400px) {
+  .why-choose-us .image {
+    padding-left: 220px;
+    margin-top: 90px;
+    margin-left: 112px;
+    margin: auto;
+  }
+}
+@media (max-width: 767px) {
+  .why-choose-us .image img {
+    max-width: 90%;
+  }
+}
+.why-choose-us .image .square {
+  position: absolute;
+  background-color: #F0EFE9;
+  height: 225px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+@media (min-width: 768px) {
+  .why-choose-us .image .square {
+    height: 425px;
+    bottom: -60px;
+  }
+}
+@media (min-width: 1400px) {
+  .why-choose-us .image .square {
+    left: 60px;
+    width: 100vw;
+  }
+}

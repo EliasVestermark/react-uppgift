@@ -3,9 +3,21 @@ import './Features.css'
 
 import SectionTitle from '../Generics/SectionTitle'
 import Button from '../Generics/Button'
-import Example from './FeaturesSection'
+import Example from './Example'
+import img_hands from '../../assets/images/Hands.png'
+import img_bulb from '../../assets/images/Bulb.png'
+import img_graph from '../../assets/images/Graph.png'
+import img_box from '../../assets/images/Box.png'
 
 const Features = () => {
+
+const examples = [
+    {img: img_hands, title: "Business Advice"},
+    {img: img_bulb, title: "Startup Business"},
+    {img: img_graph, title: "Financial Advice"},
+    {img: img_box, title: "Risk Management"}
+]
+
   return (
         <section className="features">
             <div className="container">
@@ -14,26 +26,11 @@ const Features = () => {
                     <Button type="yellow" text="Learn More" url ="/projects"/>
                 </div>
                 <div className="feature-examples">
-                    <div className="example">
-                        <i className="fa-regular fa-handshake"></i>
-                        <h3>Business Advice</h3>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    </div>
-                    <div className="example">
-                        <i className="fa-regular fa-lightbulb-on"></i>
-                        <h3>Startup Business</h3>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    </div>
-                    <div className="example">
-                        <i className="fa-regular fa-chart-mixed-up-circle-dollar"></i>
-                        <h3>Financial Advice</h3>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    </div>
-                    <div className="example">
-                        <i className="fa-regular fa-box-circle-check"></i>
-                        <h3>Risk Management</h3>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    </div>
+
+                    {examples.map((example, index) => (
+                        <Example key={index} img={example.img} title={example.title}/>
+                    ))}
+
                 </div>
             </div>
         </section>
