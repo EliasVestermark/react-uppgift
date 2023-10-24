@@ -90,3 +90,22 @@
     justify-content: center;
     align-items: center;
 }
+
+.dots {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 72px;
+    gap: 15px;
+    
+    .dot {
+        height: 12px;
+        width: 12px;
+        background-color: #C3AB71;
+        border-radius: 50%;
+        display: inline-block;
+
+        &.second {
+            background-color: #191919;
+        }
+    }
+}

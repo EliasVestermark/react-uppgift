@@ -19,9 +19,9 @@ const WhyChooseUsSection = () => {
     ]
 
     return (
-        <section class="why-choose-us">
-            <div class="container">
-                <div class="text">
+        <section className="why-choose-us">
+            <div className="container">
+                <div className="text">
                     <SectionTitle title="Why Choose Us" description="Why We Are The Best Business Consulting Agency"/>
                     
                     {reasons.map((reason, index) => (
@@ -29,8 +29,8 @@ const WhyChooseUsSection = () => {
                     ))}
 
                 </div>
-                <div class="image">
-                    <div class="square"></div>
+                <div className="image">
+                    <div className="square"></div>
                     <img src={img_twoWomen} alt="two people discussing in an office"/>
                 </div>
             </div>
