@@ -1,0 +1,157 @@
+.team-and-reviews {
+  background-color: RGBA(240, 208, 130, 0.93);
+  padding-bottom: 120px;
+}
+.team-and-reviews .meet-our-team {
+  display: block;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .team-and-reviews .meet-our-team {
+    display: grid;
+    align-items: center;
+    text-align: left;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "title btn" "team team";
+  }
+}
+.team-and-reviews .meet-our-team .section-title {
+  grid-area: title;
+}
+@media (max-width: 1199px) {
+  .team-and-reviews .meet-our-team .section-title {
+    padding: 40px 0px;
+  }
+}
+.team-and-reviews .meet-our-team .btn-yellow {
+  grid-area: btn;
+  margin-top: 50px;
+  border-color: #191919;
+}
+.team-and-reviews .meet-our-team .team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-area: team;
+  gap: 22px;
+  padding-top: 30px;
+}
+@media (min-width: 1200px) {
+  .team-and-reviews .meet-our-team .team-members {
+    display: flex;
+    grid-area: team;
+    gap: 22px;
+    padding-top: 5px;
+  }
+}
+.team-and-reviews .meet-our-team .team-members h3 {
+  padding-top: 10px;
+}
+@media (min-width: 1200px) {
+  .team-and-reviews .meet-our-team .team-members h3 {
+    padding-top: 28px;
+  }
+}
+.team-and-reviews .meet-our-team .team-members p {
+  padding-bottom: 34px;
+  font-weight: 500;
+  color: RGBA(25, 25, 25, 0.7);
+}
+.team-and-reviews .dots {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 72px;
+  gap: 15px;
+}
+.team-and-reviews .dots .dot {
+  height: 12px;
+  width: 12px;
+  background-color: #C3AB71;
+  border-radius: 50%;
+  display: inline-block;
+}
+.team-and-reviews .dots .dot.second {
+  background-color: #191919;
+}
+.team-and-reviews .testimonial {
+  background-color: #FFFFFF;
+  max-width: 1520px;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 120px;
+}
+.team-and-reviews .testimonial .reviews-row {
+  display: block;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (min-width: 576px) {
+  .team-and-reviews .testimonial .reviews-row {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media (min-width: 1300px) {
+  .team-and-reviews .testimonial .reviews-row {
+    display: flex;
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-bottom: 60px;
+    gap: 90px;
+  }
+}
+.team-and-reviews .testimonial .reviews-row .review {
+  text-align: left;
+}
+@media (max-width: 1300px) {
+  .team-and-reviews .testimonial .reviews-row .review {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "stars" "reviewer" "text";
+    padding-bottom: 40px;
+  }
+}
+.team-and-reviews .testimonial .reviews-row .review .stars {
+  color: #F94D1C;
+  grid-area: stars;
+}
+@media (max-width: 1300px) {
+  .team-and-reviews .testimonial .reviews-row .review .stars {
+    margin-left: 85px;
+  }
+}
+.team-and-reviews .testimonial .reviews-row .review p {
+  grid-area: text;
+  padding-left: 25px;
+  padding-top: 12px;
+  font-size: 18px;
+  line-height: 34px;
+}
+@media (min-width: 576px) {
+  .team-and-reviews .testimonial .reviews-row .review p {
+    padding-left: 0px;
+  }
+}
+.team-and-reviews .testimonial .reviews-row .review .reviewer {
+  grid-area: reviewer;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "img name" "img title";
+}
+.team-and-reviews .testimonial .reviews-row .review .reviewer img {
+  grid-area: img;
+  padding-right: 15px;
+}
+.team-and-reviews .testimonial .reviews-row .review .reviewer h3 {
+  grid-area: name;
+  margin-top: 10px;
+}
+.team-and-reviews .testimonial .reviews-row .review .reviewer p {
+  grid-area: title;
+  color: #F94D1C;
+  margin-top: -24px;
+  font-size: 16px;
+  padding-left: 0px;
+}

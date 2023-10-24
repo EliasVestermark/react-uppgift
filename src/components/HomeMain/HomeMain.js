@@ -6,6 +6,7 @@ import Features from '../FeaturesSection/FeaturesSection'
 import AboutCompany from '../AboutCompanySection/AboutCompanySection'
 import ProjectAndCaseSection from '../ProjectAndCaseSection/ProjectAndCaseSection'
 import WhyChooseUsSection from '../WhyChooseUsSection/WhyChooseUsSection'
+import TeamAndReviewsSection from '../TeamAndReviewsSection/TeamAndReviewsSection'
 
 const HomeMain = () => {
   return (
@@ -17,6 +18,7 @@ const HomeMain = () => {
       <OurServices/>
       <WhyChooseUsSection/>
       <ProjectAndCaseSection/>
+      <TeamAndReviewsSection/>
     </div>
   )
 }
