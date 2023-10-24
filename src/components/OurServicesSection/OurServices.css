@@ -1,0 +1,106 @@
+.our-services {
+  position: relative;
+  display: block;
+  background-color: #F0EFE9;
+  text-align: center;
+  padding-bottom: 120px;
+  z-index: 0;
+}
+.our-services .background-lines-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  max-width: 80%;
+}
+.our-services .section-title {
+  text-align: center;
+  padding-bottom: 40px;
+}
+.our-services .section-title h2 {
+  font-size: 35px;
+  font-weight: 700;
+}
+@media (min-width: 1200px) {
+  .our-services .section-title {
+    text-align: left;
+    max-width: 500px;
+  }
+  .our-services .section-title h2 {
+    font-size: 45px;
+  }
+}
+.our-services .services {
+  display: block;
+  padding-bottom: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+@media (min-width: 576px) {
+  .our-services .services {
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .our-services .services {
+    display: flex;
+    gap: 30px;
+  }
+}
+.our-services .services .services-item {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 50px 30px 40px 30px;
+  margin-bottom: 20px;
+  background-color: #FFFFFF;
+  color: RGBA(25, 25, 25, 0.8);
+  text-align: left;
+}
+@media (min-width: 576px) {
+  .our-services .services .services-item {
+    margin-bottom: 0px;
+  }
+}
+.our-services .services .services-item .short-border {
+  position: absolute;
+  left: 30px;
+  right: 75%;
+  border-top: 2px solid #191919;
+}
+.our-services .services .services-item h3 {
+  padding-top: 40px;
+  padding-bottom: 8px;
+}
+.our-services .services .services-item p {
+  padding-bottom: 12px;
+}
+.our-services .services .services-item .btn-round {
+  align-self: end;
+  margin-left: auto;
+  margin-right: 10px;
+  background-color: #191919;
+  border: 1px solid #191919;
+  color: #FFFFFF;
+  padding: 10px 17px;
+  border-radius: 50%;
+}
+.our-services .services .services-item:hover {
+  background-color: #F9D783;
+  color: #191919;
+}
+.our-services .services .services-item:hover .btn-round {
+  background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  color: #191919;
+}
+.our-services .services .services-item:hover .btn-round:hover {
+  background-color: #191919;
+  border-color: #191919;
+  color: #FFFFFF;
+}

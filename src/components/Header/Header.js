@@ -1,8 +1,8 @@
-import React from 'react';
-import './Header.css';
+import React from 'react'
+import './Header.css'
 
-import YellowButton from '../Generics/YellowButton';
-import img_logo from '../../assets/images/Logo.svg';
+import Button from '../Generics/Button'
+import img_logo from '../../assets/images/Logo.svg'
 
 const Header = () => {
   return (
@@ -41,11 +41,11 @@ const Header = () => {
             <a href="news.html">News</a>
             <a href="contact.html">Contact</a>
           </nav>
-          <YellowButton text="Login" url="/login"/>
+          <Button type="yellow" text="Login" url="/login"/>
         </div>
       </section>
     </header>
-  );
+  )
 }
 
 export default Header

@@ -1,0 +1,49 @@
+.project-and-case .section-title {
+  text-align: center;
+}
+.project-and-case .project-and-cases {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+@media (min-width: 768px) {
+  .project-and-case .project-and-cases {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.project-and-case .project-and-cases .project {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  color: #191919;
+  text-decoration: none;
+}
+.project-and-case .project-and-cases .project img {
+  width: 100%;
+  height: auto;
+}
+.project-and-case .project-and-cases .project h3 {
+  font-size: 22px;
+  padding-top: 35px;
+  padding-bottom: 16;
+  border-bottom: 1px solid #DAD9D3;
+}
+.project-and-case .project-and-cases .project .read-more {
+  padding: 15px;
+  display: block;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #191919;
+}
+.project-and-case .project-and-cases .project .read-more i {
+  margin-left: 3px;
+}
+.project-and-case .project-and-cases .project:hover .read-more {
+  text-decoration: underline;
+}
+.project-and-case .center-content {
+  margin-top: 50px;
+  margin-bottom: 90px;
+}

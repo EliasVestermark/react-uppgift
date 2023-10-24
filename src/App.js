@@ -1,6 +1,7 @@
-import './App.css';
-import Header from './components/Header/Header';
-import HomeMain from './components/HomeMain/HomeMain';
+import './App.css'
+import Header from './components/Header/Header'
+import HomeMain from './components/HomeMain/HomeMain'
+import ShowcaseSection from './components/ShowcaseSection/ShowcaseSection'
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <Header/>
       <HomeMain/>
     </div>
-  );
+  )
 }
 
 export default App;

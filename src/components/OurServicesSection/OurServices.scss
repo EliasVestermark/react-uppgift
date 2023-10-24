@@ -1,0 +1,115 @@
+.our-services {
+    position: relative;
+    display: block;
+    background-color: #F0EFE9;
+    text-align: center;
+    padding-bottom: 120px;
+    z-index: 0;
+
+    .background-lines-right {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        max-width: 80%;
+    }
+
+    .section-title {
+        text-align: center;
+        padding-bottom: 40px;
+
+        h2 {
+            font-size: 35px;
+            font-weight: 700;
+        }
+
+        @media(min-width: 1200px) {
+            text-align: left;
+            max-width: 500px;
+
+            h2 {
+                font-size: 45px;
+            }
+        }
+    }
+
+    .services {
+        display: block;
+        padding-bottom: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+
+        @media(min-width: 576px) {
+            padding-right: 0px;
+            padding-left: 0px;
+            padding-bottom: 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        @media(min-width: 1200px) {
+            display: flex;
+            gap: 30px;
+        }
+
+        .services-item {
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            padding: 50px 30px 40px 30px;
+            margin-bottom: 20px;
+            background-color: #FFFFFF;
+            color: RGBA(25,25,25,0.8 );
+            text-align: left;
+
+            @media(min-width:576px) {
+                margin-bottom: 0px;
+            }
+
+            .short-border {
+                position: absolute;
+                left: 30px;
+                right: 75%;
+                border-top: 2px solid #191919;
+            }
+
+            h3 {
+                padding-top: 40px;
+                padding-bottom: 8px;
+            }
+
+            p {
+                padding-bottom: 12px;
+            }
+
+            .btn-round {
+                align-self: end;
+                margin-left: auto;
+                margin-right: 10px;
+                background-color: #191919;
+                border: 1px solid #191919;
+                color: #FFFFFF;
+                padding: 10px 17px;
+                border-radius: 50%;
+            }
+
+            &:hover {
+                background-color: #F9D783;
+                color: #191919;
+
+                .btn-round {
+                    background-color: #FFFFFF;
+                    border: 1px solid #FFFFFF;
+                    color: #191919;
+
+                    &:hover{
+                        background-color: #191919;
+                        border-color: #191919;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+}

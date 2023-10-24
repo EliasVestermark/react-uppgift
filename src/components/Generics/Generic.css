@@ -52,3 +52,35 @@
   background-color: #191919;
   color: #F0EFE9;
 }
+
+.section-title {
+  padding-top: 70px;
+  padding-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .section-title {
+    padding-top: 120px;
+    padding-bottom: 90px;
+  }
+}
+.section-title p {
+  color: red;
+  margin-bottom: 10px;
+}
+.section-title h2 {
+  font-family: "DM Sans", sans-serif;
+  color: #191919;
+  font-weight: 700;
+  font-size: 35px;
+}
+@media (min-width: 1200px) {
+  .section-title h2 {
+    font-size: 45px;
+  }
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

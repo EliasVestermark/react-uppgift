@@ -1,0 +1,81 @@
+.features {
+    .container {
+        border: 1px solid #d3cfc9;
+        max-width: 1520px;
+        justify-content: center;
+        margin: auto;
+        padding-top: 80px;
+        
+        @media(min-width: 768px){
+            display: block;
+            padding-left: 120px;
+            padding-right: 120px;
+            padding-bottom: 80px;
+        }
+
+        @media (min-width: 1300px) {
+            display: flex;
+            padding-left: 100px;
+            padding-right: 213px;
+        }
+
+        .title-and-btn {
+            width: 60%;
+            display: block;
+            margin: auto;
+            text-align: center;
+
+            @media (min-width: 1300px) {
+                text-align: left;
+            }
+
+            .section-title {
+                display: block;
+                padding-top: 0px;
+                padding-bottom: 30px;
+            }
+
+            .btn-yellow {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        .feature-examples {
+            display: grid;
+            column-gap: 30px;
+            grid-template-columns: 1fr 1fr;
+            text-align: center;
+
+            @media(max-width: 768px){
+                display: block;
+            }
+
+            @media (min-width: 1300px) {
+                text-align: left;
+                padding-left: 103px;
+            }
+
+            .example {
+                padding: 30px 40px 30px 40px;
+                color: RGBA(25,25,25,0.8 );
+                
+                i {
+                    display: block;
+                    color: #191919;
+                    padding-bottom: 32px;
+                    font-size: 32px;
+
+                    @media (min-width: 1300px) {
+                        padding-right: 30px;
+                    }
+                }
+
+                h3 {
+                    display: block;
+                }
+                
+            }
+        }
+    }
+}

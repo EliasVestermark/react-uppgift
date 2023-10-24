@@ -1,0 +1,169 @@
+.about-company {
+  display: block;
+  padding-top: 70px;
+  padding-bottom: 80px;
+}
+@media (min-width: 1000px) {
+  .about-company {
+    display: flex;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+.about-company .image-and-square {
+  position: relative;
+}
+.about-company .image-and-square img {
+  display: none;
+}
+@media (min-width: 600px) {
+  .about-company .image-and-square img {
+    display: block;
+    padding-right: 20px;
+    margin-left: 0px;
+  }
+}
+@media (min-width: 768px) {
+  .about-company .image-and-square img {
+    margin-left: 56px;
+  }
+}
+@media (min-width: 1400px) {
+  .about-company .image-and-square img {
+    padding-right: 200px;
+  }
+}
+.about-company .image-and-square .white-lines {
+  position: absolute;
+  left: -35px;
+  top: 35px;
+  display: none;
+}
+@media (min-width: 600px) {
+  .about-company .image-and-square .white-lines {
+    display: block;
+  }
+}
+.about-company .image-and-square .blue-box {
+  background: #BEEBFF;
+  width: 100%;
+  left: 0;
+  bottom: 40px;
+  padding: 30px 17px 55px 24px;
+  margin: auto;
+}
+@media (min-width: 600px) {
+  .about-company .image-and-square .blue-box {
+    position: absolute;
+    width: 368px;
+  }
+}
+@media (min-width: 1200px) {
+  .about-company .image-and-square .blue-box {
+    bottom: 40px;
+  }
+}
+.about-company .image-and-square .blue-box h3 {
+  font-size: 20px;
+}
+.about-company .image-and-square .blue-box h3 span {
+  font-size: 16px;
+  color: #F94D1C;
+}
+.about-company .image-and-square .blue-box p {
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+.about-company .title-and-text {
+  text-align: center;
+  margin-top: 40px;
+}
+@media (min-width: 1000px) {
+  .about-company .title-and-text {
+    text-align: left;
+    margin-top: 0px;
+  }
+}
+.about-company .title-and-text .section-title {
+  padding-top: 0;
+  padding-bottom: 37px;
+}
+.about-company .title-and-text p {
+  line-height: 28px;
+}
+@media (min-width: 1200px) {
+  .about-company .title-and-text p {
+    line-height: 32px;
+  }
+}
+.about-company .title-and-text .buttons-and-text {
+  display: grid;
+  justify-content: center;
+  margin-top: 44px;
+}
+@media (min-width: 373px) {
+  .about-company .title-and-text .buttons-and-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 1000px) {
+  .about-company .title-and-text .buttons-and-text {
+    display: grid;
+    justify-content: left;
+    margin-top: 25px;
+  }
+}
+@media (min-width: 1200px) {
+  .about-company .title-and-text .buttons-and-text {
+    display: flex;
+    justify-content: left;
+    margin-top: 84px;
+  }
+}
+.about-company .title-and-text .buttons-and-text .video {
+  display: flex;
+  margin-top: 20px;
+}
+@media (min-width: 373px) {
+  .about-company .title-and-text .buttons-and-text .video {
+    margin-left: 40px;
+    margin-top: 0;
+  }
+}
+@media (min-width: 1000px) {
+  .about-company .title-and-text .buttons-and-text .video {
+    margin-top: 30px;
+    margin-left: 0px;
+  }
+}
+@media (min-width: 1200px) {
+  .about-company .title-and-text .buttons-and-text .video {
+    margin-top: 0;
+    margin-left: 40px;
+  }
+}
+.about-company .title-and-text .buttons-and-text .video .btn-video {
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  padding: 9px 18px;
+  border: 1px solid #191919;
+  transition: font-size 0.05s ease-in-out, padding 0.05s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.about-company .title-and-text .buttons-and-text .video:hover {
+  cursor: pointer;
+}
+.about-company .title-and-text .buttons-and-text .video:hover .btn-video {
+  background-color: #191919;
+  color: #F0EFE9;
+  font-size: 18px;
+  padding: 10.5px 17.2px 7.5px;
+}
+.about-company .title-and-text .buttons-and-text .video p {
+  margin-left: 16px;
+  margin-bottom: 0;
+  align-self: center;
+}

@@ -1,0 +1,23 @@
+.company-logotypes {
+
+    .logotypes {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-evenly;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        @media(min-width: 1400px) {
+            display: flex;
+            gap: 50px;
+            padding-top: 72px;
+            padding-bottom: 80px;
+        }
+        
+        img {
+            display: flex;
+            justify-self: center;
+            max-width: 100%;
+        }
+    }
+}
