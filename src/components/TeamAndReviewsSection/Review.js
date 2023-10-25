@@ -3,7 +3,7 @@ import Stars from './Stars'
 
 import img_star from '../../assets/images/star.png'
 
-const Review = ({  img, name, text }) => {
+const Review = ({  img, name, description }) => {
   return (
         <div className="review">
             <Stars img={img_star}/>
@@ -13,7 +13,7 @@ const Review = ({  img, name, text }) => {
             <div className="reviewer">
                 <img src={img} alt={name}/>
                 <h3>{name}</h3>
-                <p>{text}</p>
+                <p>{description}</p>
             </div>
         </div>
     )

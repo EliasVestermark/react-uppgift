@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Header from '../components/Header/Header'
+import Footer from '../components/Footer/Footer'
 import ShowcaseSection from '../components/ShowcaseSection/ShowcaseSection'
 import OurServices from '../components/OurServicesSection/OurServicesSection'
 import CompanyLogotypes from '../components/CompanyLogotypesSection/CompanyLogotypesSection'
@@ -22,6 +23,7 @@ const Home = () => {
       <WhyChooseUsSection/>
       <ProjectAndCaseSection/>
       <TeamAndReviewsSection/>
+      <Footer/>
     </div>
   )
 }

@@ -1,0 +1,135 @@
+footer {
+  position: relative;
+  background-color: #0E1021;
+  color: RGBA(255, 255, 255, 0.7);
+  padding-top: 60px;
+}
+@media (min-width: 1200px) {
+  footer {
+    padding-top: 114px;
+  }
+}
+footer .white-line {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 94px;
+  max-width: 30%;
+}
+@media (min-width: 768px) {
+  footer .white-line {
+    display: block;
+  }
+}
+footer .top-menu {
+  display: block;
+}
+@media (min-width: 1200px) {
+  footer .top-menu {
+    display: flex;
+    gap: 50px;
+  }
+}
+footer .top-menu .logo-and-text {
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 1200px) {
+  footer .top-menu .logo-and-text {
+    display: block;
+    padding-right: 60px;
+  }
+}
+footer .top-menu .logo-and-text .logotype {
+  margin-bottom: 18px;
+}
+footer .top-menu .logo-and-text p {
+  display: none;
+}
+@media (min-width: 768px) {
+  footer .top-menu .logo-and-text p {
+    display: inline;
+  }
+}
+footer .top-menu .logo-and-text .btn-menubars {
+  display: inline-block;
+  font-size: 25px;
+  border: none;
+  color: #FFFFFF;
+  background-color: transparent;
+  margin-bottom: 16px;
+}
+@media (min-width: 768px) {
+  footer .top-menu .logo-and-text .btn-menubars {
+    display: none;
+  }
+}
+footer .top-menu .items {
+  display: none;
+}
+@media (min-width: 768px) {
+  footer .top-menu .items {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+    padding-top: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  footer .top-menu .items {
+    gap: 50px;
+    padding-top: 0;
+  }
+}
+@media (min-width: 1400px) {
+  footer .top-menu .items {
+    gap: 100px;
+  }
+}
+footer .top-menu .items .item {
+  display: inline-block;
+  text-wrap: nowrap;
+  margin-bottom: 88px;
+}
+footer .top-menu .items .item p {
+  margin: 0;
+  font-weight: 500;
+  line-height: 30px;
+}
+@media (min-width: 1200px) {
+  footer .top-menu .items .item p {
+    line-height: 40px;
+  }
+}
+footer .top-menu .items .item h3 {
+  color: #FFFFFF;
+  padding-bottom: 20px;
+}
+footer .border-line {
+  position: absolute;
+  border: 1px solid RGBA(255, 255, 255, 0.2);
+  width: 100dvw;
+  left: 0;
+}
+footer .bottom-menu {
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  footer .bottom-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+footer .bottom-menu a {
+  color: #FFFFFF;
+  font-size: 16px;
+  margin-left: 26px;
+  text-wrap: nowrap;
+  transition: color 0.2s ease-in-out;
+}
+footer .bottom-menu a:hover {
+  color: #7c7c7c;
+}

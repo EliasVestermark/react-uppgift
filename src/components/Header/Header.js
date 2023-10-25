@@ -3,6 +3,7 @@ import './Header.css'
 
 import Button from '../Generics/Button'
 import img_logo from '../../assets/images/Logo.svg'
+import SocialMediaBar from '../Generics/SocialMediaBar'
 
 const Header = () => {
   return (
@@ -26,14 +27,9 @@ const Header = () => {
           <div className="contact-box last">
             <i className="fa-sharp fa-regular fa-location-dot"></i>
               Sveavägen 31, 111 34 STOCKHOLM
-        </div>
-        </div>
-          <div className="socialmedia-bar">
-            <a href="https://facebook.com" target="_blank"><i className="fa-brands fa-facebook"></i></a>
-            <a href="https://twitter.com" target="_blank"><i className="fa-brands fa-square-x-twitter"></i></a>
-            <a href="https://instagram.com" target="_blank"><i className="fa-brands fa-instagram"></i></a>
-            <a href="https://linkedin.com" target="_blank"><i className="last fa-brands fa-linkedin"></i></a>
           </div>
+        </div>
+          <SocialMediaBar/>
         <div className="menu">
           <nav>
             <a className="active" href="index.html">Home</a>
