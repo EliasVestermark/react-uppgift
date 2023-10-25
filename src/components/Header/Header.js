@@ -32,10 +32,10 @@ const Header = () => {
           <SocialMediaBar/>
         <div className="menu">
           <nav>
-            <a className="active" href="index.html">Home</a>
-            <a href="service.html">Service</a>
-            <a href="news.html">News</a>
-            <a href="contact.html">Contact</a>
+            <a href="/">Home</a>
+            <a href="/service">Service</a>
+            <a href="/news">News</a>
+            <a href="/contact">Contact</a>
           </nav>
           <Button type="yellow" text="Login" url="/login"/>
         </div>

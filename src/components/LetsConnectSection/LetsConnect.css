@@ -1,0 +1,39 @@
+.lets-connect {
+  background-color: #F0EFE9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  position: relative;
+  z-index: 0;
+}
+.lets-connect .background-lines {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  max-width: 80%;
+}
+.lets-connect nav {
+  padding-bottom: 10px;
+}
+.lets-connect nav a {
+  color: #5b5752;
+  text-decoration: none;
+  margin-right: 1rem;
+  font-weight: 300;
+}
+.lets-connect nav a.active {
+  font-weight: 500;
+}
+.lets-connect nav a:hover {
+  text-decoration: underline;
+}
+.lets-connect h2 {
+  padding-top: 10px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: bold;
+  font-size: 56px;
+}
