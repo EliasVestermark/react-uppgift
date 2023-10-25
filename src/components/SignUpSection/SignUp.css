@@ -1,0 +1,55 @@
+.sign-up {
+  position: relative;
+  background-color: #F0EFE9;
+  padding: 40px 0;
+  z-index: 0;
+}
+@media (min-width: 768px) {
+  .sign-up {
+    padding: 80px 0;
+  }
+}
+.sign-up .background-wavy-lines {
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  z-index: -1;
+  max-width: 20%;
+}
+.sign-up .container {
+  display: block;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .sign-up .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.sign-up .container h2 {
+  font-family: "DM sans", sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .sign-up .container h2 {
+    font-size: 45px;
+  }
+}
+.sign-up .container form input {
+  padding: 6px 20px;
+  border-radius: 25px;
+  color: RGBA(25, 25, 25, 0.5);
+  outline: none;
+  border: 1px solid rgba(25, 25, 25, 0.1);
+  margin: 20px 0px 30px 0px;
+}
+@media (min-width: 768px) {
+  .sign-up .container form input {
+    margin-right: 20px;
+  }
+}
+.sign-up .container form .btn-yellow {
+  text-wrap: nowrap;
+}

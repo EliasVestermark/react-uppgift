@@ -10,6 +10,7 @@ import AboutCompany from '../components/AboutCompanySection/AboutCompanySection'
 import ProjectAndCaseSection from '../components/ProjectAndCaseSection/ProjectAndCaseSection'
 import WhyChooseUsSection from '../components/WhyChooseUsSection/WhyChooseUsSection'
 import TeamAndReviewsSection from '../components/TeamAndReviewsSection/TeamAndReviewsSection'
+import SignUpSection from '../components/SignUpSection/SignUpSection'
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
       <WhyChooseUsSection/>
       <ProjectAndCaseSection/>
       <TeamAndReviewsSection/>
+      <SignUpSection/>
       <Footer/>
     </div>
   )
