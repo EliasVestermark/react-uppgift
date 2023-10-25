@@ -8,7 +8,7 @@ const LetsConnectSection = () => {
         <section className="lets-connect">
             <img className="background-lines" src={img_backgroundLines} alt="white-lines"/>
             <nav>
-                <a href="index.html">Home</a>
+                <a href="/">Home</a>
                 <a className="active" href="contact.html">Contact</a>
                 <h2>Let's Connect</h2>
             </nav>
