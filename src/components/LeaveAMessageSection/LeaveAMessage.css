@@ -1,0 +1,37 @@
+.leave-a-message {
+  background-color: #F0EFE9;
+  justify-content: center;
+  text-align: center;
+  padding-top: 110px;
+  padding-bottom: 80px;
+}
+.leave-a-message h3 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+@media (min-width: 576px) {
+  .leave-a-message h3 {
+    font-size: 45px;
+  }
+}
+.leave-a-message .input-container .input-text {
+  border-style: none;
+  border-radius: 30px;
+  width: 78%;
+  padding: 18px 10px 15px 35px;
+  margin-top: 16px;
+  overflow: hidden;
+  outline-color: #F9D783;
+  resize: none;
+}
+.leave-a-message .input-container .btn-yellow {
+  display: block;
+  width: 78%;
+  margin: 30px auto 0px;
+}
+.leave-a-message #Send-message {
+  display: inline-block;
+  width: 78%;
+  margin-top: 30px;
+}
