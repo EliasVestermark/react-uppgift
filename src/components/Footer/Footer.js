@@ -16,20 +16,20 @@ const Footer = () => {
     ]
 
     return (
-        <footer class="footer">
-            <img class="white-line" src={img_whiteLinesRight} alt="white line"/>
-            <div class="container">
-                <div class="top-menu">
-                    <div class="logo-and-text">
-                        <div class="logotype">
+        <footer className="footer">
+            <img className="white-line" src={img_whiteLinesRight} alt="white line"/>
+            <div className="container">
+                <div className="top-menu">
+                    <div className="logo-and-text">
+                        <div className="logotype">
                             <a href="index.html">
                                 <img src={img_crito} alt="crito-logotype" />
                             </a>
                         </div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat obcaecati voluptas voluptates! Voluptates laborum nam ratione minus necessitatibus, iure praesentium.</p>    
-                        <button class="btn-menubars"><i class="fa-regular fa-bars"></i></button>
+                        <button className="btn-menubars"><i className="fa-regular fa-bars"></i></button>
                     </div>
-                    <div class="items">
+                    <div className="items">
 
                         {items.map((item, index) => (
                             <Item key={index} title={item.title} text1={item.text1} text2={item.text2} text3={item.text3} text4={item.text4}/>
@@ -37,8 +37,8 @@ const Footer = () => {
 
                     </div>
                 </div>
-                <div class="border-line"></div>
-                <div class="bottom-menu">
+                <div className="border-line"></div>
+                <div className="bottom-menu">
                     <p>© 2023 Crito - Consulting Company Inc. All Rights Reserved.</p>     
                     <SocialMediaBar/>
                 </div>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Item = ({ title, text1, text2, text3, text4 }) => {
     return (
-        <div class="item">
+        <div className="item">
             <h3>{title}</h3>
             <p>{text1}</p>
             <p>{text2}</p>

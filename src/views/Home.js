@@ -11,6 +11,7 @@ import ProjectAndCaseSection from '../components/ProjectAndCaseSection/ProjectAn
 import WhyChooseUsSection from '../components/WhyChooseUsSection/WhyChooseUsSection'
 import TeamAndReviewsSection from '../components/TeamAndReviewsSection/TeamAndReviewsSection'
 import SignUpSection from '../components/SignUpSection/SignUpSection'
+import ArticleAndNewsSection from '../components/ArticleAndNewsSection/ArticleAndNewsSection'
 
 const Home = () => {
   return (
@@ -24,6 +25,7 @@ const Home = () => {
       <WhyChooseUsSection/>
       <ProjectAndCaseSection/>
       <TeamAndReviewsSection/>
+      <ArticleAndNewsSection/>
       <SignUpSection/>
       <Footer/>
     </div>
