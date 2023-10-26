@@ -1,0 +1,47 @@
+.container .section-title {
+  max-width: 530px;
+  padding-bottom: 40px;
+}
+.container .article-info {
+  font-family: "DM Sans", sans-serif;
+  color: #191919;
+  font-weight: 500;
+  font-size: 20px;
+  padding-bottom: 60px;
+}
+.container .article-info .dot {
+  height: 12px;
+  width: 12px;
+  background-color: #F9D783;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 25px;
+}
+.container .body {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 86px;
+}
+.container .body .left {
+  color: RGBA(25, 25, 25, 0.7);
+}
+.container .body .left img {
+  padding-right: 55px;
+}
+.container .body .left .quote {
+  display: flex;
+  gap: 14px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #191919;
+  padding: 30px 0;
+}
+.container .body .right {
+  width: 420px;
+}
+.container .body .right .recent-posts {
+  border: 1px solid RGBA(25, 25, 25, 0.2);
+}
+.container .body .right .categories {
+  border: 1px solid RGBA(25, 25, 25, 0.2);
+}

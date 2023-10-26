@@ -1,3 +1,9 @@
+section {
+    &.beige {
+        background-color: #F0EFE9;
+    }
+}
+
 .article-and-news {
 
     .title-and-btn {
@@ -62,6 +68,7 @@
 
             @media(min-width: 1400px) {
                 display: inline;
+                max-width: 408px;
             }
 
             img {

@@ -9,7 +9,17 @@ import Article from './Article'
 import Dots from '../Generics/Dots'
 import SectionTitle from '../Generics/SectionTitle'
 
-const ArticleAndNewsSection = () => {
+const ArticleAndNewsSection = ({ type }) => {
+
+    const setBackgroundColour = () => {
+        switch (type) {
+          case 'beige':
+            return 'beige '
+            break;
+        default: 
+            return ''
+        }
+    }
 
     const articles = [
         {date: "25", month: "Mar", img: img_article1, alt: "woman in a classroom", category: "Business", title: "How To Use Digitalization In The Classroom", text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero."},
@@ -18,19 +28,22 @@ const ArticleAndNewsSection = () => {
     ]
 
     return (
-        <section className="article-and-news container">
-            <div className="title-and-btn">
-                <SectionTitle title="Article & News" description="Get Every Single Articles & News"/>
-                <Button type="transparent" text="Browse Articles" url="/newsandarticles"/>
-            </div>
-            <div className="articles-container">
+        <section className={setBackgroundColour()}>
+            <div className="article-and-news container">
+                <div className="title-and-btn">
+                    <SectionTitle title="Article & News" description="Get Every Single Articles & News"/>
+                    <Button type="transparent" text="Browse Articles" url="/newsandarticles"/>
+                </div>
+                <div className="articles-container">
                 
-                {articles.map((article, index) => (
-                    <Article key={index} date={article.date} month={article.month} img={article.img} alt={article.alt} category={article.category} title={article.title} text={article.text} />
-                ))}
+                    {articles.map((article, index) => (
+                        <Article key={index} date={article.date} month={article.month} img={article.img} alt={article.alt} category={article.category} title={article.title} text={article.text} />
+                    ))}
 
+                </div>
+                <Dots/>
             </div>
-            <Dots/>
+            
         </section>
     )
 }

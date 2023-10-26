@@ -1,3 +1,7 @@
+section.beige {
+  background-color: #F0EFE9;
+}
+
 .article-and-news .title-and-btn {
   display: block;
   padding-bottom: 45px;
@@ -62,6 +66,7 @@
 @media (min-width: 1400px) {
   .article-and-news .articles-container .article {
     display: inline;
+    max-width: 408px;
   }
 }
 .article-and-news .articles-container .article img {
