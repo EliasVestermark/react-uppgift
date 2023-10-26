@@ -15,7 +15,7 @@ import ArticleAndNewsSection from '../components/ArticleAndNewsSection/ArticleAn
 
 const Home = () => {
   return (
-    <div className='wrapper'>
+    <>
       <Header/>
       <ShowcaseSection/>
       <CompanyLogotypes/>
@@ -28,7 +28,7 @@ const Home = () => {
       <ArticleAndNewsSection/>
       <SignUpSection/>
       <Footer/>
-    </div>
+    </>
   )
 }
 

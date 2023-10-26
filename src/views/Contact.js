@@ -9,14 +9,14 @@ import LeaveAMessageSection from '../components/LeaveAMessageSection/LeaveAMessa
 
 const contact = () => {
   return (
-    <div className='wrapper'>
+    <>
       <Header/>
       <LetsConnectSection/>
       <ContactMenuSection/>
       <LeaveAMessageSection/>
       <Map/>
       <Footer/>
-    </div>
+    </>
   )
 }
 
