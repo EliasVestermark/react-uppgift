@@ -3,8 +3,37 @@ import './News.css'
 
 import SectionTitle from '../Generics/SectionTitle'
 import img_article from '../../assets/images/KimberlyHansen.png'
+import RecentPost from './RecentPost'
+import Categories from './Categories'
+import Tags from './Tags'
 
 const NewsSection = () => {
+
+    const posts = [
+        {title: "How To Blow Through Capital At An Incredible Rate", date: "Jan 14, 2020"},
+        {title: "Design Studios That Everyone Should Know About?", date: "Jan 14, 2020"},
+        {title: "How did we get 1M+ visitors in 30 days without anything!", date: "Jan 14, 2020"},
+        {title: "Figma On Figma: How We Built Our Website Design System", date: "Jan 14, 2020"}
+    ]
+
+    const categories = [
+        {title: "Technology", text: "- 20 Posts"},
+        {title: "Freelancing", text: "- 07 Posts"},
+        {title: "Writing", text: "- 16 Posts"},
+        {title: "Marketing", text: "- 11 Posts"},
+        {title: "Business", text: "- 35 Posts"},
+        {title: "Education", text: "- 14 Posts"}
+    ]
+
+    const tags = [
+        {title: "Digitalization"},
+        {title: "School"},
+        {title: "IT"},
+        {title: "Design"},
+        {title: "Work"},
+        {title: "Tech"}
+    ]
+
   return (
     <section>
         <div className="container">
@@ -27,17 +56,33 @@ const NewsSection = () => {
                     </p>
                     <div className="tags">
 
+                        {tags.map((tag, index) => (
+                            <Tags key={index} title={tag.title}/>
+                        ))}
+
                     </div>
                 </div>
                 <div className="right">
                     <div className="searchbar">
-                        
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input placeholder="Type to search..."/>
                     </div>
                     <div className="recent-posts">
                         <h3>Recent Posts</h3>
+                        <div className="short-border"></div>
+
+                        {posts.map((post, index) => (
+                            <RecentPost key={index} title={post.title} date={post.date}/>
+                        ))}
+
                     </div>
                     <div className="categories">
                         <h3>Categories</h3>
+                        <div className="short-border"></div>
+                        
+                        {categories.map((category, index) => (
+                            <Categories key={index} title={category.title} text={category.text}/>
+                        ))}
 
                     </div>
                 </div>
