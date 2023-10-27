@@ -1,6 +1,8 @@
 import React from 'react'
 import './Generic.css'
 
+import { Link } from 'react-router-dom'
+
 const Button = ({ text, url, type }) => {
 
   const getButtonClassName = () => {
@@ -18,7 +20,7 @@ const Button = ({ text, url, type }) => {
   }
 
   return (
-    <a className={getButtonClassName()} href={url}>{text} <i className="fa-regular fa-arrow-up-right"></i></a>  )
+    <Link className={getButtonClassName()} to={url}>{text} <i className="fa-regular fa-arrow-up-right"></i></Link>  )
 }
 
 export default Button

@@ -4,6 +4,7 @@ import './Header.css'
 import Button from '../Generics/Button'
 import img_logo from '../../assets/images/Logo.svg'
 import SocialMediaBar from '../Generics/SocialMediaBar'
+import { NavLink, Link } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -11,9 +12,9 @@ const Header = () => {
       <section className="container">
         <button className="btn-menubars"><i className="fa-regular fa-bars"></i></button>
         <div className="logotype">
-          <a href="index.html">
+          <Link to="/">
             <img src={img_logo} alt="crito-logotype"/>
-          </a>
+          </Link>
         </div>
         <div className="contactinformation-bar">
           <div className="contact-box">
@@ -32,10 +33,10 @@ const Header = () => {
           <SocialMediaBar/>
         <div className="menu">
           <nav>
-            <a href="/">Home</a>
-            <a href="/service">Service</a>
-            <a href="/news">News</a>
-            <a href="/contact">Contact</a>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/service">Service</NavLink>
+            <NavLink to="/news">News</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
           </nav>
           <Button type="yellow" text="Login" url="/login"/>
         </div>

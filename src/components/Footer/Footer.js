@@ -5,6 +5,7 @@ import img_crito from '../../assets/images/LogoWhite.svg'
 import img_whiteLinesRight from '../../assets/images/background-lines-white-right.svg'
 import Item from './Item'
 import SocialMediaBar from '../Generics/SocialMediaBar'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
 
@@ -22,9 +23,9 @@ const Footer = () => {
                 <div className="top-menu">
                     <div className="logo-and-text">
                         <div className="logotype">
-                            <a href="index.html">
+                            <Link to="/">
                                 <img src={img_crito} alt="crito-logotype" />
-                            </a>
+                            </Link>
                         </div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat obcaecati voluptas voluptates! Voluptates laborum nam ratione minus necessitatibus, iure praesentium.</p>    
                         <button className="btn-menubars"><i className="fa-regular fa-bars"></i></button>
