@@ -11,14 +11,14 @@ import img_box from '../../assets/images/Box.png'
 
 const Features = () => {
 
-const examples = [
-    {img: img_hands, title: "Business Advice"},
-    {img: img_bulb, title: "Startup Business"},
-    {img: img_graph, title: "Financial Advice"},
-    {img: img_box, title: "Risk Management"}
-]
+    const examples = [
+        {img: img_hands, title: "Business Advice"},
+        {img: img_bulb, title: "Startup Business"},
+        {img: img_graph, title: "Financial Advice"},
+        {img: img_box, title: "Risk Management"}
+    ]
 
-  return (
+    return (
         <section className="features">
             <div className="container">
                 <div className="title-and-btn">

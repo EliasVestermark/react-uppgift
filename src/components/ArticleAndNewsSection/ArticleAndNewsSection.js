@@ -34,7 +34,7 @@ const ArticleAndNewsSection = ({ type }) => {
                     <SectionTitle title="Article & News" description="Get Every Single Articles & News"/>
                     <Button type="transparent" text="Browse Articles" url="/newsandarticles"/>
                 </div>
-                <div className="articles-container">
+                <div className="articles-container">                    
                 
                     {articles.map((article, index) => (
                         <Article key={index} date={article.date} month={article.month} img={article.img} alt={article.alt} category={article.category} title={article.title} text={article.text} />

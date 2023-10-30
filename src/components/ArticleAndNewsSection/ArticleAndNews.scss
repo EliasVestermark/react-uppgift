@@ -74,6 +74,7 @@ section {
             img {
                 grid-area: img;
                 padding: 0px 20px 20px 0px;
+                max-width: 408px;
                 width: 100%;
 
                 @media(min-width: 440px) {

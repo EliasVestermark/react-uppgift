@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './OurNews.css'
 
 import img_article1 from '../../assets/images/article1.png'
@@ -10,26 +10,28 @@ import SectionTitle from '../Generics/SectionTitle'
 
 const OurNewsSection = () => {
 
-    let articleList = [];
+    const [articleList, setArticles] = useState([])
+
+    useEffect(() => {
+        getNews()
+    }, [])
 
     async function getNews() {
         try {
             const result = await fetch("https://win23-assignment.azurewebsites.net/api/articles")
-            articleList = await result.json()
-
+            setArticles(await result.json())
+            
         }
         catch (error) {
             console.warn(error)
         }
     }
 
-    getNews()
-
-    const articles = [
-        {date: "25", month: "Mar", img: img_article1, alt: "woman in a classroom", category: "Business", title: "How To Use Digitalization In The Classroom", text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero."},
-        {date: "17", month: "Mar", img: img_article2, alt: "chat bot", category: "Business", title: "How To Implement Chat GPT In Your Projects", text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero."},
-        {date: "13", month: "Mar", img: img_article3, alt: "a book about css", category: "Business", title: "The Guide To Support Modern CSS Design", text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero."}
-    ]
+    // const articles = [
+    //     {date: "25", month: "Mar", img: img_article1, alt: "woman in a classroom", category: "Business", title: "How To Use Digitalization In The Classroom", text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero."},
+    //     {date: "17", month: "Mar", img: img_article2, alt: "chat bot", category: "Business", title: "How To Implement Chat GPT In Your Projects", text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero."},
+    //     {date: "13", month: "Mar", img: img_article3, alt: "a book about css", category: "Business", title: "The Guide To Support Modern CSS Design", text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero."}
+    // ]
 
 
     return (
@@ -40,12 +42,12 @@ const OurNewsSection = () => {
             <div className="articles-container">
 
                 {articleList.map((article) => (
-                    <GetArticle key={article.id} img={article.imageUrl} category={article.category} title={article.title} text={article.content} />
+                    <GetArticle key={article.id} imageUrl={article.imageUrl} category={article.category} title={article.title} content={article.content} />
                 ))}
                 
-                {articles.map((article, index) => (
+                {/* {articles.map((article, index) => (
                     <Article key={index} date={article.date} month={article.month} img={article.img} alt={article.alt} category={article.category} title={article.title} text={article.text} />
-                ))}
+                ))} */}
 
             </div>
             <div className="navigation">
