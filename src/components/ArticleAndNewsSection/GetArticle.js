@@ -1,19 +1,19 @@
 import React from 'react'
 
-import Date from './Date'
+const GetArticle = ({ imageUrl, category, title, content, published, day , month }) => {
 
-const GetArticle = ({ imageUrl, category, title, content, published}) => {
-
-    
 
     return (
         <div className="article">
-            <Date/>
-            <img src={imageUrl} alt="En bild"/>
+            <div className="date">
+                <p className="month"><span>{day}</span><br/>{month}</p>
+            </div>
+            <div className="image-container">
+                <img className="image-cropped" src={imageUrl} alt="En bild"/>
+            </div>
             <h4>{category}</h4>
             <h3>{title}</h3>
             <p className="text">{content}</p>
-            <p>{published}</p>
         </div>
     ) 
 }

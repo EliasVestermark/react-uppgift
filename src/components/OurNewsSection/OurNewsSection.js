@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './OurNews.css'
 
-
 import GetArticle from '../../components/ArticleAndNewsSection/GetArticle'
 import SectionTitle from '../Generics/SectionTitle'
 
@@ -16,50 +15,41 @@ const OurNewsSection = () => {
     async function getNews() {
         try {
             const result = await fetch("https://win23-assignment.azurewebsites.net/api/articles")
-            setArticles(await result.json())
+            const data = await result.json()
+            
+            setArticles(data)
+            formatDates(data)
         }
         catch (error) {
             console.warn(error)
         }
     }
 
-    let dateList = []
+    function formatDates(articles) {
+        const months = [
+            "",
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Okt",
+            "Nov",
+            "Dec"
+        ]
 
-    for (let date of articleList) {
-        dateList.push(date.published)
+        for (let item of articles) {
+            let month = item.published.toString().slice(5, 7)
+            let monthFormated = months[month]
+
+            item.day = item.published.toString().slice(8, 10)
+            item.month = monthFormated
+        }
     }
-    console.log(dateList)
-
-    let date1 = dateList[0]
-
-    console.log(date1)
-    
-    let dateString = date1.toString()
-    console.log(dateString.slice(5, 7))
-
-    
-
-    // console.logdate.slice(5, 7)
-
-    // const sliceDates = () => {
-    //     let dateSliced = date1.slice(1, 12)
-    //     console.log(dateSliced)
-    // }
-
-    // sliceDates()
-
-
-
-    
-    // console.log(date1)
-    // // console.log(date1.slice(2, 6)); 
-    // let dateSliced = date1.slice(5, 7)
-    // console.log(dateSliced)
-
-
-    
-
-    
 
     return (
         <section className="our-news container">
@@ -69,7 +59,7 @@ const OurNewsSection = () => {
             <div className="articles-container">
 
                 {articleList.map((article) => (
-                    <GetArticle key={article.id} imageUrl={article.imageUrl} category={article.category} title={article.title} content={article.content} published={article.published}/>
+                    <GetArticle key={article.id} imageUrl={article.imageUrl} category={article.category} title={article.title} content={article.content} day={article.day} month={article.month}/>
                 ))}
                
             </div>

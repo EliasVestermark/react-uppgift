@@ -1,11 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './ArticleAndNews.css'
 
-import img_article1 from '../../assets/images/article1.png'
-import img_article2 from '../../assets/images/article2.png'
-import img_article3 from '../../assets/images/article3.png'
 import Button from '../Generics/Button'
-import Article from './Article'
+import GetArticle from './GetArticle'
 import Dots from '../Generics/Dots'
 import SectionTitle from '../Generics/SectionTitle'
 
@@ -21,24 +18,70 @@ const ArticleAndNewsSection = ({ type }) => {
         }
     }
 
-    const articles = [
-        {date: "25", month: "Mar", img: img_article1, alt: "woman in a classroom", category: "Business", title: "How To Use Digitalization In The Classroom", text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero."},
-        {date: "17", month: "Mar", img: img_article2, alt: "chat bot", category: "Business", title: "How To Implement Chat GPT In Your Projects", text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero."},
-        {date: "13", month: "Mar", img: img_article3, alt: "a book about css", category: "Business", title: "The Guide To Support Modern CSS Design", text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero."}
-    ]
+    const [shortArticleList, setShortArticles] = useState([])
+
+    useEffect(() => {
+        getNews()
+    }, [])
+
+    async function getNews() {
+        try {
+            const result = await fetch("https://win23-assignment.azurewebsites.net/api/articles")
+            const data = await result.json()
+            
+            formatDates(data)
+            sliceArticles(data)
+            setShortArticles(shortArray)
+        }
+        catch (error) {
+            console.warn(error)
+        }
+    }
+
+    let shortArray
+
+    function sliceArticles(articles) {
+        shortArray = articles.slice(0, 3)
+    }
+
+    function formatDates(articles) {
+        const months = [
+            "",
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Okt",
+            "Nov",
+            "Dec"
+        ]
+
+        for (let item of articles) {
+            let month = item.published.toString().slice(5, 7)
+            let monthFormated = months[month]
+
+            item.day = item.published.toString().slice(8, 10)
+            item.month = monthFormated
+        }
+    }
 
     return (
         <section className={setBackgroundColour()}>
             <div className="article-and-news container">
                 <div className="title-and-btn">
                     <SectionTitle title="Article & News" description="Get Every Single Articles & News"/>
-                    <Button type="transparent" text="Browse Articles" url="/newsandarticles"/>
+                    <Button type="transparent" text="Browse Articles" url="/news"/>
                 </div>
                 <div className="articles-container">                    
                 
-                    {articles.map((article, index) => (
-                        <Article key={index} date={article.date} month={article.month} img={article.img} alt={article.alt} category={article.category} title={article.title} text={article.text} />
-                    ))}
+                {shortArticleList.map((article) => (
+                    <GetArticle key={article.id} imageUrl={article.imageUrl} category={article.category} title={article.title} content={article.content} day={article.day} month={article.month}/>
+                ))}
 
                 </div>
                 <Dots/>
