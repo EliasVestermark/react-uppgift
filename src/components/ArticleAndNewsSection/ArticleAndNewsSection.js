@@ -30,18 +30,11 @@ const ArticleAndNewsSection = ({ type }) => {
             const data = await result.json()
             
             formatDates(data)
-            sliceArticles(data)
-            setShortArticles(shortArray)
+            setShortArticles(data.slice(0, 3))
         }
         catch (error) {
             console.warn(error)
         }
-    }
-
-    let shortArray
-
-    function sliceArticles(articles) {
-        shortArray = articles.slice(0, 3)
     }
 
     function formatDates(articles) {
