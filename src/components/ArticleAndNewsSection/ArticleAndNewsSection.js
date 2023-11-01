@@ -18,7 +18,7 @@ const ArticleAndNewsSection = ({ type }) => {
         }
     }
 
-    const [shortArticleList, setShortArticles] = useState([])
+    const [shortArticleList, setShortArticlesList] = useState([])
 
     useEffect(() => {
         getNews()
@@ -30,7 +30,7 @@ const ArticleAndNewsSection = ({ type }) => {
             const data = await result.json()
             
             formatDates(data)
-            setShortArticles(data.slice(0, 3))
+            setShortArticlesList(data.slice(0, 3))
         }
         catch (error) {
             console.warn(error)
@@ -73,7 +73,7 @@ const ArticleAndNewsSection = ({ type }) => {
                 <div className="articles-container">                    
                 
                 {shortArticleList.map((article) => (
-                    <GetArticle key={article.id} imageUrl={article.imageUrl} category={article.category} title={article.title} content={article.content} day={article.day} month={article.month}/>
+                    <GetArticle key={article.id} id={article.id} imageUrl={article.imageUrl} category={article.category} title={article.title} content={article.content} day={article.day} month={article.month}/>
                 ))}
 
                 </div>

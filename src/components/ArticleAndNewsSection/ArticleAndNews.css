@@ -55,6 +55,8 @@ section.beige {
 .article-and-news .articles-container .article {
   position: relative;
   display: inline;
+  text-decoration: none;
+  color: #191919;
 }
 @media (min-width: 1000px) {
   .article-and-news .articles-container .article {
@@ -107,6 +109,7 @@ section.beige {
 }
 .article-and-news .articles-container .article h3 {
   grid-area: h3;
+  color: #191919;
 }
 @media (min-width: 1400px) {
   .article-and-news .articles-container .article h3 {

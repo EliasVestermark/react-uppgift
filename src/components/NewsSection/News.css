@@ -18,14 +18,31 @@
 }
 .container .body {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto;
   gap: 86px;
+  padding-bottom: 20px;
+}
+@media (min-width: 1400px) {
+  .container .body {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 86px;
+  }
 }
 .container .body .left {
   color: RGBA(25, 25, 25, 0.7);
+  max-width: 95vw;
 }
 .container .body .left img {
-  padding-right: 55px;
+  max-width: 90vw;
+  height: auto;
+}
+@media (min-width: 1000px) {
+  .container .body .left img {
+    padding-right: 55px;
+    max-width: 813px;
+    height: 500px;
+  }
 }
 .container .body .left .quote {
   display: flex;
@@ -37,9 +54,15 @@
 }
 .container .body .left .tags {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   padding-top: 40px;
-  padding-bottom: 64px;
+  padding-bottom: 0;
+}
+@media (min-width: 1400px) {
+  .container .body .left .tags {
+    padding-bottom: 64px;
+  }
 }
 .container .body .left .tags .tag {
   display: flex;
@@ -54,10 +77,27 @@
   padding: 0 30px;
 }
 .container .body .right {
-  width: 420px;
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
   color: #191919;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .container .body .right {
+    display: grid;
+    align-items: baseline;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "search search" "recent categories";
+  }
+}
+@media (min-width: 1400px) {
+  .container .body .right {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 .container .body .right .short-border {
   position: absolute;
@@ -71,6 +111,7 @@
   font-size: 22px;
 }
 .container .body .right .searchbar {
+  grid-area: search;
   display: flex;
   align-items: center;
   background-color: #F3F3F3;
@@ -90,9 +131,16 @@
   color: #191919;
 }
 .container .body .right .recent-posts {
+  grid-area: recent;
   padding: 40px;
   border: 1px solid RGBA(25, 25, 25, 0.2);
   position: relative;
+  width: 340px;
+}
+@media (min-width: 1000px) {
+  .container .body .right .recent-posts {
+    width: 420px;
+  }
 }
 .container .body .right .recent-posts .recent-post {
   margin-top: 14px;
@@ -107,10 +155,24 @@
   color: RGBA(25, 25, 25, 0.7);
 }
 .container .body .right .categories {
-  margin-top: 40px;
+  grid-area: categories;
+  justify-self: end;
   padding: 40px;
   position: relative;
   border: 1px solid RGBA(25, 25, 25, 0.2);
+  width: 340px;
+  margin-top: 40px;
+}
+@media (min-width: 1000px) {
+  .container .body .right .categories {
+    width: 420px;
+    margin-top: 0;
+  }
+}
+@media (min-width: 1400px) {
+  .container .body .right .categories {
+    margin-top: 40px;
+  }
 }
 .container .body .right .categories span {
   font-weight: 400;

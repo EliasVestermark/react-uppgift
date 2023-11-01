@@ -1,21 +1,21 @@
 import React from 'react'
 
 import Header from '../components/Header/Header'
-import NewsAndArticlesSection from '../components/NewsAndArticlesSection/NewsAndArticlesSection'
-import ArticleAndNewsSection from '../components/ArticleAndNewsSection/ArticleAndNewsSection'
 import Footer from '../components/Footer/Footer'
-import NewsSection from '../components/NewsSection/NewsSection'
+import SignUpSection from '../components/SignUpSection/SignUpSection'
+import NewsAndArticlesSection from '../components/NewsAndArticlesSection/NewsAndArticlesSection'
+import OurNewsSection from '../components/OurNewsSection/OurNewsSection'
 
-const News = () => {
-    return (
-        <>
-          <Header/>
-          <NewsAndArticlesSection/>
-          <NewsSection/>
-          <ArticleAndNewsSection type="beige"/>
-          <Footer/>
-        </>
-      )
+const NewsAndArticles = () => {
+  return (
+    <>
+      <Header/>
+      <NewsAndArticlesSection/>
+      <OurNewsSection/>
+      <SignUpSection/>
+      <Footer/>
+    </>
+  )
 }
 
-export default News
+export default NewsAndArticles

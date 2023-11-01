@@ -57,6 +57,8 @@ section {
         .article {
             position: relative;
             display: inline;
+            text-decoration: none;
+            color: #191919;
 
             @media(min-width: 1000px) {
                 display: grid;
@@ -110,6 +112,7 @@ section {
 
             h3 {
                 grid-area: h3;
+                color: #191919;
 
                 @media(min-width: 1400px) {
                     margin-top: 20px;

@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const GetArticle = ({ imageUrl, category, title, content, published, day , month }) => {
+const GetArticle = ({ id, imageUrl, category, title, content, day , month }) => {
 
 
     return (
-        <div className="article">
+        <Link to={`/news/${id}`} className="article">
             <div className="date">
                 <p className="month"><span>{day}</span><br/>{month}</p>
             </div>
@@ -14,7 +15,7 @@ const GetArticle = ({ imageUrl, category, title, content, published, day , month
             <h4>{category}</h4>
             <h3>{title}</h3>
             <p className="text">{content}</p>
-        </div>
+        </Link>
     ) 
 }
 

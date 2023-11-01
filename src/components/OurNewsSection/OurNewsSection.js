@@ -59,7 +59,7 @@ const OurNewsSection = () => {
             <div className="articles-container">
 
                 {articleList.map((article) => (
-                    <GetArticle key={article.id} imageUrl={article.imageUrl} category={article.category} title={article.title} content={article.content} day={article.day} month={article.month}/>
+                    <GetArticle key={article.id} id={article.id} imageUrl={article.imageUrl} category={article.category} title={article.title} content={article.content} day={article.day} month={article.month}/>
                 ))}
                
             </div>

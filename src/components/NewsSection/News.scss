@@ -23,14 +23,29 @@
 
     .body {
         display: grid;
-        grid-template-columns: auto 1fr;
+        grid-template-columns: auto;
         gap: 86px;
+        padding-bottom: 20px;
+
+        @media (min-width: 1400px) {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 86px;
+        }
 
         .left {
             color: RGBA(25,25,25,0.7 );
-            
+            max-width: 95vw;
+
             img {
-                padding-right: 55px;
+                max-width: 90vw;
+                height: auto;
+
+                @media(min-width: 1000px) {
+                    padding-right: 55px;
+                    max-width: 813px;
+                    height: 500px;
+                }
             }
 
             .quote {
@@ -44,9 +59,14 @@
 
             .tags {
                 display: flex;
+                flex-wrap: wrap;
                 gap: 12px;
                 padding-top: 40px;
-                padding-bottom: 64px;
+                padding-bottom: 0;
+
+                @media (min-width: 1400px) {
+                    padding-bottom: 64px;
+                }
 
                 .tag {
                     display: flex;
@@ -64,10 +84,26 @@
         }
 
         .right {
-            width: 420px;
             font-family: 'DM Sans', sans-serif;
             font-weight: 700;
             color: #191919;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            @media (min-width:768px) {
+                display: grid;
+                align-items:baseline;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: "search search"
+                                     "recent categories";
+            }
+
+            @media (min-width:1400px) {
+                width: 420px;
+                display: flex;
+                flex-direction: column;
+            }
 
             .short-border {
                 position: absolute;
@@ -83,6 +119,7 @@
             }
 
             .searchbar {
+                grid-area: search;
                 display: flex;
                 align-items: center;
                 background-color: #F3F3F3;
@@ -105,9 +142,15 @@
             }
 
             .recent-posts {
+                grid-area: recent;
                 padding: 40px;
                 border: 1px solid RGBA(25,25,25,0.2 );
                 position: relative;
+                width: 340px;
+
+                @media (min-width:1000px) {
+                    width: 420px;
+                }
 
                 .recent-post {
                     margin-top: 14px;
@@ -126,10 +169,22 @@
             }
 
             .categories {
-                margin-top: 40px;
+                grid-area: categories;
+                justify-self: end;
                 padding: 40px;
                 position: relative;
                 border: 1px solid RGBA(25,25,25,0.2 );
+                width: 340px;
+                margin-top: 40px;
+
+                @media (min-width:1000px) {
+                    width: 420px;
+                    margin-top: 0;
+                }
+
+                @media (min-width:1400px) {
+                    margin-top: 40px;
+                }
 
                 span {
                     font-weight: 400;
