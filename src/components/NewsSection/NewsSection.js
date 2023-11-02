@@ -15,7 +15,8 @@ const NewsSection = () => {
 
     useEffect(() => {
         getNewsById()
-    }, [])
+        window.scrollTo(0, 500)
+    }, [id])
 
     async function getNewsById() {
         try {

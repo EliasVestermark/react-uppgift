@@ -10,6 +10,7 @@ const OurNewsSection = () => {
 
     useEffect(() => {
         getNews()
+        window.scrollTo(0, 0)
     }, [])
 
     async function getNews() {

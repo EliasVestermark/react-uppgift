@@ -7,15 +7,18 @@ import Footer from '../components/Footer/Footer'
 import NewsSection from '../components/NewsSection/NewsSection'
 
 const News = () => {
-    return (
-        <>
-          <Header/>
-          <NewsAndArticlesSection/>
-          <NewsSection/>
-          <ArticleAndNewsSection type="beige"/>
-          <Footer/>
-        </>
-      )
+
+  window.scrollTo(0, 500)
+  
+  return (
+    <>
+      <Header/>
+      <NewsAndArticlesSection/>
+      <NewsSection/>
+      <ArticleAndNewsSection type="beige"/>
+      <Footer/>
+    </>
+  )
 }
 
 export default News
