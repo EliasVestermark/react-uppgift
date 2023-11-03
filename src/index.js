@@ -8,11 +8,13 @@ import Contact from './views/Contact'
 import NotFound from './views/NotFound'
 import News from './views/News'
 import NewsId from './views/NewsId'
+import ScrollToTop from './components/Generics/ScrollToTop'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+    <ScrollToTop/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/contact' element={<Contact/>}/>

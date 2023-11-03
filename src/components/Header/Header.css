@@ -1,6 +1,7 @@
 header {
   background-color: #F0EFE9;
   padding: 16px;
+  position: relative;
 }
 header .container {
   display: grid;
@@ -15,6 +16,7 @@ header .container {
   }
 }
 header .container .btn-menubars {
+  z-index: 2;
   grid-area: bars;
   font-size: 25px;
   border: none;
@@ -24,6 +26,45 @@ header .container .btn-menubars {
   header .container .btn-menubars {
     display: none;
   }
+}
+header .container .btn-menubars.white {
+  color: #DAD9D3;
+}
+header .container .hide {
+  display: none;
+}
+header .container .mobile-menu {
+  z-index: 1;
+  position: absolute;
+  background-color: #191919;
+  left: 0;
+  top: 0;
+  width: 100vw;
+}
+header .container .mobile-menu .container {
+  display: flex;
+  flex-direction: column;
+}
+header .container .mobile-menu .container .logotype-white {
+  margin-left: 15px;
+  margin-top: 15px;
+  align-self: start;
+  padding-bottom: 20px;
+}
+header .container .mobile-menu .container .menu-item {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 24px;
+  color: #DAD9D3;
+  text-decoration: none;
+  text-align: center;
+  width: 100vw;
+}
+header .container .mobile-menu .container .menu-item:hover {
+  background-color: #222222;
+}
+header .container .mobile-menu .container .menu-item.active {
+  background-color: #222222;
 }
 header .container .logotype {
   grid-area: logo;

@@ -1,6 +1,7 @@
 header {
     background-color: #F0EFE9;
     padding: 16px;
+    position: relative;
 
     .container {
         display: grid;
@@ -15,6 +16,7 @@ header {
         }
         
         .btn-menubars {
+            z-index: 2;
             grid-area: bars;
             font-size: 25px;
             border: none;
@@ -22,6 +24,53 @@ header {
 
             @media (min-width: 992px) {
                 display: none;
+            }
+
+            &.white {
+                color: #DAD9D3;
+            }
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .mobile-menu {
+            z-index: 1;
+            position: absolute;
+            background-color: #191919;
+            left: 0;
+            top: 0;
+            width: 100vw;
+
+            .container {
+                display: flex;
+                flex-direction: column;
+
+                .logotype-white {
+                    margin-left: 15px;
+                    margin-top: 15px;
+                    align-self: start;
+                    padding-bottom: 20px;
+                }
+    
+                .menu-item {
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                    font-size: 24px;
+                    color: #DAD9D3;
+                    text-decoration: none;
+                    text-align: center;
+                    width: 100vw;
+
+                    &:hover {
+                        background-color: #222222;
+                    }
+
+                    &.active {
+                        background-color: #222222;
+                    }
+                }
             }
         }
 

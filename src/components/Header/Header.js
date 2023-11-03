@@ -1,16 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Header.css'
 
 import Button from '../Generics/Button'
 import img_logo from '../../assets/images/Logo.svg'
 import SocialMediaBar from '../Generics/SocialMediaBar'
+import MobileMenu from '../Header/MobileMenu'
 import { NavLink, Link } from 'react-router-dom'
 
 const Header = () => {
+
+  const [menuOpen, setMenuOpen] = useState(false)
+  console.log(menuOpen)
+
   return (
     <header>
       <section className="container">
-        <button className="btn-menubars"><i className="fa-regular fa-bars"></i></button>
+        <button onClick={() => setMenuOpen(!menuOpen)} className={`btn-menubars ${menuOpen ? "white" : ""}`}><i className="fa-regular fa-bars"></i></button>
+        <MobileMenu menuOpen={menuOpen}/>
+
         <div className="logotype">
           <Link to="/">
             <img src={img_logo} alt="crito-logotype"/>
