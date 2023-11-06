@@ -1,4 +1,5 @@
 .leave-a-message {
+    position: relative;
     background-color: #F0EFE9;
     justify-content: center;
     text-align: center;
@@ -39,5 +40,27 @@
         display: inline-block;
         width: 78%;
         margin-top: 30px;
+    }
+    
+    .pop-up {
+        position: absolute;
+        background-color: #F9D783;
+        border: 1px solid #F9D783;
+        color: #4c4946;
+        text-decoration: none;
+        padding: 9px;
+        font-weight: 400;
+        border-radius: 25px;
+        left: 12%;
+        right: 12%;
+        bottom: 10px;
+        transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+        @media (min-width: 768px) {
+            left: 30%;
+            right: 30%;
+            bottom: 20px;
+            padding: 9px 24px;
+        }
     }
 }

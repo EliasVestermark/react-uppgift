@@ -12,7 +12,11 @@ const LeaveAMessageSection = () => {
                     <input type="email" id="email" name="skicka-meddelande" className="input-text" placeholder="Email*"/>
                     <textarea type="text" id="meddelande" name="skicka-meddelande" className="input-text" rows="5" placeholder="Your Message*"></textarea>
                     <button id="send-message" className="btn-yellow" type="submit">Send Message <i className="fa-regular fa-arrow-up-right"></i></button>
-                </form>    
+                </form>  
+
+                <div className="pop-up">
+                    Your message has been sent    
+                </div>  
             </div>
         </section>
     )
