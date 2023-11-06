@@ -10,7 +10,6 @@ import { NavLink, Link } from 'react-router-dom'
 const Header = () => {
 
   const [menuOpen, setMenuOpen] = useState(false)
-  console.log(menuOpen)
 
   return (
     <header>

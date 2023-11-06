@@ -1,63 +1,23 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 import './News.css'
 
 import SectionTitle from '../Generics/SectionTitle'
-import img_article from '../../assets/images/KimberlyHansen.png'
 import RecentPost from './RecentPost'
 import Categories from './Categories'
 import Tags from './Tags'
 import { useParams } from 'react-router-dom'
+import { useArticles } from '../../contexts/ArticleContext'
 
 const NewsSection = () => {
 
+    const { article, getNewsById, clearArticle } = useArticles()
     const { id } = useParams()
-    const [article, setArticle] = useState(null)
 
     useEffect(() => {
-        getNewsById()
+        getNewsById(id)
+
+        return () => clearArticle()
     }, [id])
-
-    async function getNewsById() {
-        try {
-            const result = await fetch(`https://win23-assignment.azurewebsites.net/api/articles/${id}`)
-            const data = await result.json()
-
-            if (result.status === 200) {
-                formatDates(data)
-                setArticle(data)
-            }
-
-            
-        }
-        catch(error) {
-            console.warn(error)
-        }
-    }
-
-    function formatDates(article) {
-        const months = [
-            "",
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Okt",
-            "Nov",
-            "Dec"
-        ]
-
-        let month = article.published.toString().slice(5, 7)
-        let monthFormated = months[month]
-
-        article.day = article.published.toString().slice(8, 10)
-        article.year = article.published.toString().slice(0, 4)
-        article.month = monthFormated
-    }
 
     const posts = [
         {title: "How To Blow Through Capital At An Incredible Rate", date: "Jan 14, 2020"},
@@ -136,18 +96,15 @@ const NewsSection = () => {
 
                         </div>
                     </div>
-                            
+         
                 </div>
-
             </div>
-
         </section>
     )
     :
     (  
-    <div>
-        Artikeln hittades inte
-    </div>
+    <>
+    </>
     )
 }
 
