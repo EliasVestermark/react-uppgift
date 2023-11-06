@@ -111,7 +111,6 @@ export const ArticleProvider = ({children}) => {
         setArticle(null)
     }
 
-
     return (
         <ArticleContext.Provider value={{articleList, articleShortList, article, getNewsById, clearArticle}}>
             {children}
