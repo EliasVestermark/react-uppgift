@@ -17,18 +17,33 @@
     }
 
     .input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-        .input-text {
-            border-style: none;  
-            border-radius: 30px;
+        .error-and-input {
+            margin-top: 20px;
             width: 78%;
-            padding: 18px 10px 15px 35px;
-            margin-top: 16px;
-            overflow: hidden;
-            outline-color: #F9D783;
-            resize: none;
-        } 
-        
+
+            p {
+                font-size: 14px;
+                text-align: left;
+                margin: 0px 35px;
+                color: #db3c3c;
+                height: 30px;
+            }
+
+            .input-text {
+                border-style: none;  
+                border-radius: 30px;
+                width: 100%;
+                padding: 18px 10px 15px 35px;
+                overflow: hidden;
+                outline-color: #F9D783;
+                resize: none;
+            } 
+        }
+         
         .btn-yellow {
             display: block;
             width: 78%;
@@ -40,6 +55,10 @@
         display: inline-block;
         width: 78%;
         margin-top: 30px;
+    }
+
+    .hidden {
+        display: none;
     }
     
     .pop-up {
@@ -54,13 +73,27 @@
         left: 12%;
         right: 12%;
         bottom: 10px;
-        transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        visibility: hidden;
+        animation: fade 3s;
 
         @media (min-width: 768px) {
             left: 30%;
             right: 30%;
             bottom: 20px;
             padding: 9px 24px;
+        }
+
+        @keyframes fade {
+            0% {
+                visibility: visible;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
         }
     }
 }
