@@ -10,7 +10,7 @@ import { useArticles } from '../../contexts/ArticleContext'
 
 const NewsSection = () => {
 
-    const { article, getNewsById, clearArticle } = useArticles()
+    const { months, article, getNewsById, clearArticle } = useArticles()
     const { id } = useParams()
 
     useEffect(() => {
@@ -49,7 +49,7 @@ const NewsSection = () => {
             <div className="container">
                 <div>
                     <SectionTitle title="" description={article.title}/>
-                    <p className="article-info">{article.month} {article.day}, {article.year}<span className="dot"/>{article.category}<span className="dot"/>{article.author}</p>
+                    <p className="article-info">{months[article.published.slice(5, 7)]} {article.published.slice(8, 10)}, {article.published.slice(0, 4)}<span className="dot"/>{article.category}<span className="dot"/>{article.author}</p>
                 </div>
                 <div className="body">
                     <div className="left">

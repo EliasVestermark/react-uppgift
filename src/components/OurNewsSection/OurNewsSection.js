@@ -7,7 +7,7 @@ import { useArticles } from '../../contexts/ArticleContext'
 
 const OurNewsSection = () => {
 
-    const { articleList } = useArticles()
+    const { articleList, months } = useArticles()
 
     return (
         <section className="our-news container">
@@ -19,7 +19,7 @@ const OurNewsSection = () => {
                 {articleList ? 
                 (
                     articleList.map((article) => (
-                        <GetArticle key={article.id} id={article.id} imageUrl={article.imageUrl} category={article.category} title={article.title} content={article.content} day={article.day} month={article.month}/>
+                        <GetArticle key={article.id} month={months[article.published.slice(5,7)]} day={article.published.slice(8,10)} id={article.id} imageUrl={article.imageUrl} category={article.category} title={article.title} content={article.content}/>
                     ))
                 )
                 :

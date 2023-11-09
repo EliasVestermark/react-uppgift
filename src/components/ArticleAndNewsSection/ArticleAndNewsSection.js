@@ -18,7 +18,7 @@ const ArticleAndNewsSection = ({ type }) => {
         }
     }
 
-    const { articleShortList } = useArticles()
+    const { months, articleShortList } = useArticles()
 
     return (
         <section className={setBackgroundColour()}>
@@ -32,7 +32,7 @@ const ArticleAndNewsSection = ({ type }) => {
                 {articleShortList ? 
                 (
                     articleShortList.map((article) => (
-                        <GetArticle key={article.id} id={article.id} imageUrl={article.imageUrl} category={article.category} title={article.title} content={article.content} day={article.day} month={article.month}/>
+                        <GetArticle key={article.id} id={article.id} imageUrl={article.imageUrl} category={article.category} title={article.title} content={article.content} day={article.published.slice(8, 10)} month={months[article.published.slice(5, 7)]}/>
                     ))
                 )
                 :
